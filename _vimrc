@@ -544,9 +544,12 @@ endfunction
 
 " This rewires n and N to do the highlighing...
 "Dosen't Work :( on guivim
-"nnoremap <silent> n   n:call HLNext(0.4)<cr>
-"nnoremap <silent> N   N:call HLNext(0.4)<cr>
 
+if has("win32")
+else
+  nnoremap <silent> n   n:call HLNext(0.4)<cr>
+  nnoremap <silent> N   N:call HLNext(0.4)<cr>
+endif
 
 "====[ Make tabs, trailing whitespace, and non-breaking spaces visible ]======
 
