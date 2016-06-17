@@ -18,14 +18,15 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType cpp set omnifunc=omni#cpp#complete#Main
 
-
-:source $HOME/vimfiles/plugin/rng.vim
-
 " set the runtime path to include Vundle and initialize
-"set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
-set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
-call vundle#begin('$USERPROFILE/vimfiles/bundle/')
+if has("win32")
+  set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
+  call vundle#begin('$USERPROFILE/vimfiles/bundle/')
+else
+  set rtp+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
+endif
+
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 

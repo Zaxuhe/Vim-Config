@@ -13,8 +13,8 @@ if [ -f $HOME/.vimrc -o -L $HOME/.vimrc ]; then
 fi
 
 #easy edit
-ln -s $INSTALL_ROOT $VIM_ROOT
-ln -s $VIM_ROOT/_vimrc $HOME/.vimrc
+ln -s $INSTALL_ROOT/vimfiles $VIM_ROOT
+ln -s $INSTALL_ROOT/_vimrc $HOME/.vimrc
 
 echo -e "Installing vim (Vi Improved) package from repository"
 #installinv vim-gnome allows copy/pasting beween vim and system clipboard
@@ -28,10 +28,9 @@ sudo apt-get --yes install cscope
 
 cd $VIM_ROOT 
 
-git submodule init 
-git submodule update 
-git submodule foreach git checkout master
-git submodule foreach git pull origin master
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+vim +PluginInstall +qall
 
 # echo -e "Install neovim"
 

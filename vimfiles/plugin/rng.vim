@@ -1,5 +1,3 @@
-" George Marsaglia's Multiply-with-carry Random Number Generator {{{
-" Modified to work within Vim's semantics
 let s:m_w = 1 + getpid()
 let s:m_z = localtime()
 
@@ -81,3 +79,4 @@ function! RandomStringFromRegex(regex, lenght, ...)
   let len = len(charlist) - 1
   return join(map(range(a:lenght), 'charlist[RandomNumber(0, len)]'), '')
 endfunction
+
