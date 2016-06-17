@@ -52,11 +52,7 @@ Plugin 'chaoren/vim-wordmotion'
 Plugin 'yegappan/mru'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'vim-scripts/OmniCppComplete'
-"Plugin 'shawncplus/phpcomplete.vim'
-
-"Pomodoro
-Bundle 'pydave/AsyncCommand'
-Bundle 'mnick/vim-pomodoro'
+Plugin 'shawncplus/phpcomplete.vim'
 
 "Snipmate
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -625,13 +621,7 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
-"Pomodoro
-" Duration of a pomodoro in minutes (default: 25)
-let g:pomodoro_time_work = 25
-
-" Duration of a break in minutes (default: 5)
-let g:pomodoro_time_slack = 5
-
+"Sizes
 let g:NERDTreeWinSize = 30
 let g:tagbar_width = 25
 let NERDTreeShowBookmarks=1
